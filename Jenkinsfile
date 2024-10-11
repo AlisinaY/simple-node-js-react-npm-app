@@ -1,13 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node'
-            args '-u root'  // Optional: Führe als Root-Benutzer aus, um Berechtigungsprobleme zu vermeiden
-        }
-    }
-    environment {
-        CI = 'true'
-    }
+    agent any
     stages {
         stage('Build') {
             steps {
